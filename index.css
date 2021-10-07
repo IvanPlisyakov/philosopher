@@ -1,0 +1,293 @@
+@import url(roboto/roboto.css);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #E5E5E5;
+}
+
+.main {
+  width: 1440px;
+  margin: 0 auto 0 auto;
+  padding: 77px 0 180px 0;
+  background-color: white;
+}
+
+.header {
+  margin: 0 30px;
+  width: 1380px;
+  border-bottom: 1px solid black;
+}
+
+.header__title {
+  margin: 0 0 10px 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;  
+}
+
+/* Собственно сам слайдер */
+.slider{
+  max-width: 1062px;
+  position: relative;
+  margin: 117px auto 153px auto;
+  height: 414px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Заголовок слайда */
+.slideText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*color: #fff;
+  font-size: 35px;
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;*/
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;  
+  color: rgba(0, 0, 0, 0.7);
+}
+/* Кружочки */
+.slider-dots {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-dots_item{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+
+.composition {
+  margin: 0 80px 222px 80px;
+}
+
+.composition__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  margin: 0 0 118px 0;
+}
+
+.composition__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 115px;
+}
+
+.composition__item {
+  height: 676px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.composition__item-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  margin-bottom: 48px;
+}
+
+.composition__item-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;  
+}
+
+.meaning {
+  margin: 0 80px 136px 80px;
+}
+
+.meaning__title {
+  width: 620px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;  
+  margin-bottom: 33px;
+}
+
+.meaning__column {
+  margin-left: 20px;
+}
+
+.meaning__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;  
+  position: relative;
+}
+
+.meaning__text::before{
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  left: -20px;
+  top: 60%;
+  transform: translate(0, -50%);
+}
+
+.method {
+  margin: 0 80px 147px 80px;
+}
+
+.method__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 66px;  
+  margin-bottom: 20px;
+}
+
+.method__text {
+  margin: 0 0 0 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.method__text_margin {
+  margin-left: 40px;
+}
+
+.method__list {
+  margin: 30px 0 45px 0;
+}
+
+.philosophy {
+  margin: 0 100px 111px 100px;
+}
+
+.philosophy__title {font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.philosophy__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;  
+  margin-bottom: 35px;
+}
+
+.block {
+  margin: 0 80px 70px 80px;
+}
+
+.block__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 49px;
+  margin-bottom: 17px;
+}
+
+.block__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 24px;
+  margin-left: 20px;
+}
